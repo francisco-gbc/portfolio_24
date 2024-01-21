@@ -1,0 +1,845 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    text-decoration: none;
+    font: inherit;
+    outline:0;
+   /* vertical-align:baseline;*/
+   /*display:flex;*/
+   font-family: 'Montserrat', sans-serif;
+   
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root{
+    --black30:rgb(30,30,30);
+    --black3040:rgb(30,30,30,0.4);
+    --white: rgb(255, 255, 255);
+
+}
+/*Geral------------*/
+
+
+body{
+    width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*Remover realce azul em smartphones*/
+ 
+    user-select: none;
+    
+}
+
+a{
+ color: inherit;   
+ text-decoration: none;
+ transition: 0.6s;
+}
+a:visited{
+    color: inherit;
+}
+
+a:hover{
+    transition: 0.2s;
+}
+
+b{
+    font-weight: 700;
+}
+
+/*Scroll------------------------------*/
+
+body::-webkit-scrollbar {
+    width: 10px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);       
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color:rgb(0,0,0,0.15);    
+    border-radius: 20px;       
+  }
+
+/*Corpo-------------------*/
+
+.sobre{
+    background-color:rgb(30, 30, 30);
+    width: 160px;
+    height: 40px;
+
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+    transition: ease 0.5s;
+}
+
+.sobre p{
+    color: white;
+    font-weight: 500;
+    font-size: 0.9em;
+    
+}
+
+.sobre:hover{
+    opacity: 80%;
+    transition: ease 0.5s;
+}
+
+/* Banner ---------------------------------------*/
+
+.banner{
+    min-width: 100%;
+    min-height: 500px;
+    max-width: 100%;
+    
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner_logo{
+    height: 250px;
+    margin-top: 140px;
+    margin-bottom: -250px;
+    max-width: 90%;
+}
+
+.banner_icon{
+    height: 300px;
+    margin-left: 1025px;
+    opacity: 10%;
+}
+
+.banner p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #404040;
+    font-size: 2em;
+    letter-spacing: 0.25em;
+    margin-top: -20px;
+
+    max-width: 90%;
+    
+    text-align: center;
+}
+
+.banner_but{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 160px;
+    height: 40px;
+    border-radius: 50px;
+    max-width: 90%;
+
+    transition: 0.6s;
+
+    background-color: #F1F1F1;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #404040;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    }
+
+    .banner_but:hover{
+    transition: 1s;
+
+    letter-spacing: 0.12em;
+    background-color: rgb(255,180,0);
+    }
+
+
+/*Carrossel empresas -----------------------*/
+
+@keyframes slide{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#experiencia{
+    height: 80px;
+    background-color: #202020;
+    min-width: 100%;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#exp_1{
+    width: 900px;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 40%;
+    transition: 0.6s;
+}
+
+#exp_1:hover{
+    opacity: 60%;
+    transition: 0.8s;
+}
+
+.logos{
+    width: 900px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.logos-slide{
+    display: inline-block;
+    animation: 120s slide infinite linear; 
+}
+
+.logos-slide img{
+    height: 40px;
+}
+
+.opacidade_car{
+    background: linear-gradient(-90deg, #202020, rgba(255, 255, 255, 0.0),rgba(40, 40, 40, 0.0),rgba(40, 40, 40, 0.0),rgba(40, 40, 40, 0.0),rgba(40, 40, 40, 0.0),#202020) no-repeat;
+    width: 900px;
+    max-width: 90%;
+    height: 80px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+/* +7 anos de experiência-----------------*/
+
+.mais7{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #252525;
+    min-width: 100%;
+    height: 40px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #909090;
+    font-size: 1em;
+    
+    }
+
+.mais7 p{
+    opacity: 50%;
+}
+
+/* Bio -----------------------------------------*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    margin-bottom: -50px;
+
+}
+
+.bio_titulo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1.4em;
+    letter-spacing: 0.06em;
+    background-color: #303030;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 60px;
+}
+
+#bio{
+    min-width: 100%;
+    background-color: #F1F1F1;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20PX 0 40px 0;
+}
+
+#bio_info{
+    width: 900px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#perfil_img img{
+    width: 200px;
+    transition: 0.4s;
+}
+
+#perfil_img img:hover{
+    transform: scale(1.04);
+    transition: 0.6s;
+}
+
+
+#perfil_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+
+    height: 200px;
+    width: 200px;
+    
+    border-radius: 50%;
+    border: 5px solid #D9D9D9;
+    color: #979797;
+
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+#perfil_img:hover{
+    
+    border: 5px solid #FFA800;
+    transition: 1s;
+}
+
+#perfil_info{
+    margin-top: 20px;
+}
+
+
+.nome_perfil{
+    font-size: 2em;
+    max-width: 100%;
+    font-weight: 800;
+    color: #979797;
+    line-height: 0.7;
+    
+}
+
+.nome_perfil span{
+    color: #303030;
+    line-height: 0.7;
+}
+
+
+#perfil_3{
+    font-size: 0.8em;
+    background-color: #D9D9D9;
+    border-radius: 0 15px 0 15px;
+    font-weight: 400;
+    color:#979797;
+    padding: 5px 12px;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+
+    max-width: 380px;
+}
+
+#perfil_3:hover{
+    transition: 0.8s;
+    background-color: #FFA800;
+    color:#303030;
+}
+
+
+#mini_bio{
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    font-size: 0.85em;
+    text-align: justify;
+    max-width: 380px;
+
+}
+
+/*Buttons Bio-----------------------*/
+
+.bio_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.bio_but_1{
+    background-color:  #F1F1F1;
+    width: 240px;
+    height: 40px;
+    border-radius: 50px;
+
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #303030;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: 0.6s;
+    border: 1.5px solid #303030;
+    transform: scale(1);
+    opacity: 30%;
+}
+
+.bio_but_1:hover{
+    border:1.5px solid #FFA800;
+    background-color: #FFA800;
+    color: #303030;
+    opacity: 1;
+    transition: 0.8s;
+    transform: scale(1.05);
+    letter-spacing: 0.05em;
+}
+
+.bio_but_2{
+    background-color:  #F1F1F1;
+    width: 110px;
+    height: 40px;
+    border-radius: 50px;
+
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #303030;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: 0.6s;
+    border: 1.5px solid #303030;
+    transform: scale(1);
+    opacity: 30%;
+}
+
+.bio_but_2:hover{
+    border:1.5px solid rgb(14,118,168);
+    background-color: rgb(14,118,168);
+    color: #ffffff;
+    opacity: 1;
+    transition: 0.8s;
+    transform: scale(1.05);
+}
+
+.bio_button p{
+    font-size: 1.5em;
+}
+
+/*Softwares-------------------------*/
+
+.softwares{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+     
+    width: 100%;
+    max-width: 100%;
+    
+    margin-top: -35px;
+    background-color: #F1F1F1;
+    padding: 50px 0;
+
+}
+
+.softwares_icon{
+    max-height: 40px;
+    transition: 0.4s;
+    margin: 0 14px;
+    padding: 20px 0;
+    
+    opacity: 10%;
+}
+
+.softwares_icon:hover{
+    transform: translateY(-6px) scale(1.1);
+    transition: 0.8s;
+    opacity: 100%;
+}
+
+/* Projetos -------------------------------------*/
+
+#projetos_titulo{
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #404040;
+    font-size: 1.4em;
+    letter-spacing: 0.05em;
+}
+
+#projetos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.projetos_card{
+    background-color: #F1F1F1;
+    border-radius: 20px;
+    max-width: 90%;
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+
+    opacity: 90%;
+}
+
+.projetos_card:hover{
+    transform: scale(1.02);
+    transition: 0.6s;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+
+   
+}
+
+.projetos_card:hover img{
+    transform: scale(1.1);
+    transition: 1.2s;
+}
+
+.proj_img{
+    min-width: 100%;
+    max-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    
+    overflow: hidden;
+}
+
+.proj_img img{
+    max-width: 100%;
+    transition: 1s;
+}
+
+.proj_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    min-width: 100%;
+    background-color: #F1F1F1;
+    z-index: 2;
+    transition: 0.8s;
+
+    text-align: center;
+
+}
+
+.proj_info p{
+    max-width: 90%;
+    color: #979797;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.proj_info h2{
+    transition: 0.8s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #303030;
+    font-size: 1.2em;
+    margin-bottom: 4px;
+}
+
+.projetos_card:hover .proj_info h2{
+    transition: 1s;
+    letter-spacing: 0.05em;
+    
+}
+
+
+/* Responsividades ------------------------------*/
+
+@media (max-width: 1400px){
+
+/*Banner-----------------------*/
+.banner{
+    min-width: 100%;
+    min-height: 500px;
+    max-width: 100%;
+}
+
+.banner_logo{
+    height: 200px;
+    margin-top: 140px;
+    margin-bottom: -200px;
+}
+
+.banner_icon{
+    height: 250px;
+    margin-left: 840px;
+}
+
+.banner p{
+    font-size: 1.7em;
+}
+}
+
+@media (max-width: 1200px){
+
+    /*Banner-----------------------*/
+    .banner{
+        min-width: 100%;
+        min-height: 500px;
+        max-width: 100%;
+    }
+    
+    .banner_logo{
+        height: 200px;
+        margin-top: 140px;
+        margin-bottom: 40px;
+    }
+    
+    .banner_icon{
+        display: none;
+        height: 250px;
+        margin-left: 0px;
+    }
+    
+    .banner p{
+        
+        font-size: 1.6em;
+    }
+    }
+
+
+
+@media (max-width: 900px){
+
+    
+    /*Banner---------------*/
+
+    #banner_div{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*Logo Branca-------------*/
+
+    .logo_white_banner{
+        width: 100px;
+        margin-bottom: 40px;
+    }
+
+    .logo_white_banner:hover{
+        transform: scale(1.1); 
+    }
+
+
+    /* Card Banner------------*/
+    
+    .info_card{
+        width: 280px;
+        padding: 30px 20px;
+    }
+
+    #experiencia{
+        margin-top: -1px;
+        margin-bottom: -1px;
+    }
+
+    /*Bio--------------------------------*/
+
+    main{
+        max-width: 100%;   
+    }
+
+    #bio{
+        width: 100%;
+        background-color: #F1F1F1;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #bio_info{
+        flex-direction: column;
+        gap: 5px;
+
+    }
+
+    #perfil_img{
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+    }
+
+    #perfil_img img{
+        width: 150px;
+        height: 150px;
+    }
+
+    #perfil_img:hover img{
+        transform: scale(1.05);
+    }
+
+    #perfil_info{
+        text-align: center;
+        max-width: 90%;
+    }
+
+
+    /*Buttons--------------------*/
+
+    .bio_but_1{
+        font-size: 0.9em;
+    }
+
+    .bio_but_2{
+        font-size: 1em;
+    }
+
+
+    /*Softwares-----------------*/
+
+    .softwares{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+         
+        min-width: 100%;
+        max-width: 90%;
+        margin-top: -35px;
+      
+      }
+      
+
+}
+
+
+@media (max-width: 650px){
+
+    /*Banner-----------------------*/
+    .banner{
+        min-width: 100%;
+        min-height: 500px;
+        max-width: 100%;
+    }
+    
+    .banner_logo{
+        height: 130px;
+        margin-top: 180px;
+        margin-bottom: 30px;
+    }
+    
+    .banner p{
+        font-size: 1.1em;
+    }
+
+    .banner_but{
+    
+        margin-top: 120px;
+        margin-bottom: 120px;
+        width: 160px;
+        height: 40px;
+        border-radius: 50px;
+    
+        transition: 0.6s;
+    
+        background-color: #F1F1F1;
+    
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #404040;
+        font-size: 1.1em;
+        letter-spacing: 0.05em;
+        }
+    
+   
+    }
+
+  
+    @media (max-width: 350px){
+
+        /*Banner-----------------------*/
+                
+        .banner p{
+            font-size: 0.9em;
+        }
+
+       
+        }
+
+
